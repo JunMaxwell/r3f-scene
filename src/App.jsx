@@ -25,7 +25,7 @@ const state = proxy({
 function Paddle() {
   const model = useRef()
   const { count } = useSnapshot(state)
-  const { nodes, materials } = useGLTF("/pingpong.glb")
+  const { nodes, materials } = useGLTF(`${import.meta.env.VITE_PUBLIC_URL}/pingpong.glb`)
   const [ref, api] = useBox(() => ({ type: "Kinematic", args: [3.4, 1, 3.5], onCollide: (e) => state.api.pong(e.contact.impactVelocity) }))
   useFrame((state) => {
     model.current.rotation.x = THREE.MathUtils.lerp(model.current.rotation.x, 0, 0.2)
