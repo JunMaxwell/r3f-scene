@@ -8,7 +8,7 @@ export default function Intro({ children }) {
       <div className={`fullscreen bg ready"} ${clicked && "clicked"}`}>
         <div className="stack">
           <a href="#" onClick={() => setClicked(true)}>
-            {"click to continue"}
+            {"Hello, welcome to my ping pong game! Click to start."}
           </a>
         </div>
       </div>
